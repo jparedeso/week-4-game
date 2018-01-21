@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>week-4-game</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/toastr.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<script src="assets/javascript/toastr.js"></script>
+	<script src="assets/javascript/game.js"></script>
+</head>
+<body>
+	<div class="container">
+		<header>
+			<h1 class="text-center">StarWars RPG Game</h1>
+		</header>
+		<div class="row">
+			<h2 id="myInstructions">Select your Character.</h2>
+		</div>
+		<div class="row">
+			<div class="col-md-3">
+				<div class="myImages" data-myselection="0" data-selected="false">
+					<img src="assets/images/obiwan.png" alt="Obi-Wan">
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="myImages" data-myselection="1" data-selected="false">
+					<img src="assets/images/chewie.png" alt=" Chewbacca">
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="myImages" data-myselection="2" data-selected="false">
+					<img src="assets/images/darthvader.png" alt="Darth Vader">
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="myImages" data-myselection="3" data-selected="false">
+					<img src="assets/images/hansolo.png" alt="Han Solo">
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-3" id="stats0">
+				<p>Health : 225</p>
+				<p>Attack Power: 11</p>
+				<p>Counter Attack Power: 22</p>							
+			</div>
+			<div class="col-md-3" id="stats1">
+				<p>Health : 270</p>
+				<p>Attack Power: 9</p>
+				<p>Counter Attack Power: 30</p>					
+			</div>
+			<div class="col-md-3" id="stats2">
+				<p>Health : 180</p>
+				<p>Attack Power: 12</p>
+				<p>Counter Attack Power: 27</p>					
+			</div>
+			<div class="col-md-3" id="stats3">
+				<p>Health : 165</p>
+				<p>Attack Power: 21</p>
+				<p>Counter Attack Power: 7</p>				
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-md-1"></div>
+			<div class="col-md-10">
+				<button class="btn btn-success" id="atk">Attack</button>
+				<button class="btn btn-primary" id="restart">Restart</button>
+			</div>
+		</div>
+		<div class="row">
+			<h4 id="myStatus"></h4>
+		</div>
+		<div class="row">
+			<div class="col-md-1"></div>
+			
+			<div class="col-md-3" id="current">
+				<h3>Your Character</h3>
+			</div>						
+			<div class="col-md-3" id="enemy">
+				<h3>Your Opponent</h3>
+			</div>
+			<div class="col-md-1"></div>
+		</div>
+		<div class="row">
+			<div class="col-md-1"></div>
+			<div class="col-md-3" id="currentStats"></div>						
+			<div class="col-md-3" id="enemyStats"></div>
+			<div class="col-md-1"></div>
+		</div>
+		
+	</div>
+</body>
+</html>
