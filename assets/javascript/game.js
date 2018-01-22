@@ -93,7 +93,8 @@ $(function(){
 			if (!opponent.fight(currentCharacter.newAttack)) {
 				message += (" Your opponent is dead. Select a new opponent.");
 
-				$("#enemy").html("<h3>" + opponent.name + " is dead. Select a new Opponent.</h3>");
+				$("#myInstructions").text("Select your new Opponent!");
+				$("#enemy").html("<h3>" + opponent.name + " is dead. Select a new Opponent.</h3>");				
 				$("#enemyStats").empty();
 
 				remainingOpponents--;
