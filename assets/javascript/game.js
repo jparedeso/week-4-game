@@ -58,6 +58,7 @@ $(function(){
 				
 				case 0:
 					currentCharacter = myCharacters[parseInt(selection)];
+					$("#myStatus").html("Prepare to fight.");
 					$(this).attr("data-selected", "true");
 					$("#current").html("<h3>Your Character</h3>");
 					$("#current").append($(this));
@@ -71,6 +72,7 @@ $(function(){
 				
 				case 1:
 					opponent = myCharacters[parseInt(selection)];
+					$("#myStatus").html("Prepare to fight.");
 					$(this).attr("data-selected", "true");
 					$("#enemy").html("<h3>" + opponent.name + "</h3>");
 					$("#enemy").append($(this));
@@ -80,10 +82,7 @@ $(function(){
 					$("#enemyStats").append("Health: " + opponent.health);
 					$("#enemyStats").append("<br>Attack Power: " + opponent.newAttack);
 					$("#enemyStats").append("<br>Counter Attack Power: " + opponent.counterAttack);
-					break;
-				
-				default:
-					break;
+					break;				
 			}
 		}
 	});
