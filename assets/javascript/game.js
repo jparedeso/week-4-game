@@ -18,8 +18,7 @@ toastr.options = {
 
 function Character(name, health, attack, counterAttack) {
 	this.name = name;
-	this.currentHealth = health;
-	this.health = this.currentHealth;
+	this.health = health;
 	this.baseAttack = attack;
 	this.newAttack = this.baseAttack;
 	this.counterAttack = counterAttack;
