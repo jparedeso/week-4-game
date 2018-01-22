@@ -59,6 +59,7 @@ $(function(){
 				case 0:
 					currentCharacter = myCharacters[parseInt(selection)];
 					$(this).attr("data-selected", "true");
+					$("#current").html("<h3>" + currentCharacter.name + "</h3>");
 					$("#current").append($(this));
 					$("#stats" + selection).empty();
 					status = 1;
@@ -71,6 +72,7 @@ $(function(){
 				case 1:
 					opponent = myCharacters[parseInt(selection)];
 					$(this).attr("data-selected", "true");
+					$("#enemy").html("<h3>" + opponent.name + "</h3>");
 					$("#enemy").append($(this));
 					$("#stats" + selection).empty();
 					status = 2;					
@@ -88,7 +90,7 @@ $(function(){
 
 	$("#atk").click(function() {
 		if (status === 2) {
-			var message = ("You attacked your opponent for " + currentCharacter.newAttack + " damage.");
+			var message = ("You attacked your opponent for " + currentCharacter.newAttack + " damage. ");
 			if (!opponent.fight(currentCharacter.newAttack)) {
 				message += (" Your opponent is dead. Select a new opponent.");
 
@@ -98,6 +100,7 @@ $(function(){
 				remainingOpponents--;
 				if (remainingOpponents <= 0 ) {
 					status = 4;
+					$("#enemy").html("<h3>No Opponents left</h3>");
 					toastr["success"]("You Won! Press Restart to play again.");
 				} else {
 					status = 1;
