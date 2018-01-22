@@ -100,6 +100,7 @@ $(function(){
 				if (remainingOpponents <= 0 ) {
 					status = 4;
 					$("#enemy").html("<h3>No opponents left.</h3>");
+					message = "You Won! Press Restart to play again."
 					toastr["success"]("You Won! Press Restart to play again.");
 				} else {
 					status = 1;
@@ -110,11 +111,8 @@ $(function(){
 				message += (opponent.name + " attacked you back for " + opponent.counterAttack + " damage.");
 
 				if (!currentCharacter.fight(opponent.counterAttack)) {
-
-					$("#" + currentCharacter.name).text("0");
-					$("#" + currentCharacter.name).attr("style", "width: 0%");
 					status = 3;
-					message = "";
+					message = "You Lost. Press Restart to play again.";
 					toastr["error"]("You lost! Press Restart to play again.");
 				
 				} else {
